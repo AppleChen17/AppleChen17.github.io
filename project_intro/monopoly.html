@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap need to put above -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Autour+One&family=Delicious+Handrawn&family=Knewave&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Appleple</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>#include</li>
+        <li><a href="../index.html"> &lt; Appleple &gt;</a></li>
+        <li>
+          <a href="../about.html"> &lt; About_me &gt;</a>
+        </li>
+        <li>
+          <a class="active" href="../project.html"> &lt; Projects &gt;</a>
+        </li>
+        <li>
+          <a href="../life.html"> &lt; Life &gt;</a>
+        </li>
+        <li>
+          <a href="../other.html"> &lt; Other &gt;</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+  <main>
+    <a href="../project.html" class="back_button">Back</a>
+
+    <section class="project_title">
+      <h1>Monopoly</h1>
+    </section>
+
+    <section class="project_intro">
+      <h2 style="padding-left: 1rem" class="knewave-regular">
+        Language : C++, Allegro5
+      </h2>
+      <h3 style="padding-left: 1rem" class="knewave-regular">Group Project</h3>
+      <p>
+        This is a class project. Based on the basic game rule of monopoly, this
+        project add more features on it to make it more interesting. For
+        example, our group member create our own unique monopoly map related to
+        "programming language".We also implemented the feature of able to choose
+        how many people could play together in a round and user could enter
+        their name (it is ok to enter same name or choosing same character since
+        the way to store the player is according to the order of
+        choosing).Besides, there is also "characters" exist in our game, which
+        have different abilities that could be triggered while playing. We also
+        maintain the "community chest card" in this game, there are some
+        different events and corresponding effects happened. Furthermore, Our
+        group member combine the Tower Defense Game in the "Gambling" part,
+        making the monopoly more interesting.
+      </p>
+      <p>
+        I am responsible for the character ability design, character choosing
+        page, character ability triggered and the gambling game.
+      </p>
+      <p>
+        The below is the demo video of our project with some description of the
+        functionalities.
+      </p>
+    </section>
+
+    <section class="project_demo">
+      <video
+        controls
+        poster="../image/monopoly_poster.png"
+        width="600"
+        controlslist="nodownload"
+      >
+        <source src="../demo_video/monopoly.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+</html>
