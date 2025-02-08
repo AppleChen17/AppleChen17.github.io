@@ -41,7 +41,9 @@ h6 {
 
 nav {
   background-color: $ThemeColor;
-
+  // position: sticky;
+  // top:0;
+  // z-index: 100;
   /* salmon color */
   font-size: 1.1rem;
 
@@ -132,6 +134,14 @@ main {
       text-align: justify;
     }
   }
+}
+
+footer{
+  text-align: center;
+  padding: 10px;
+  background-color: $ThemeColor;
+  color: white;
+  font-size: 1.02rem;
 }
 
 section {
