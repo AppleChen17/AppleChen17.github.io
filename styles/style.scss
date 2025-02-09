@@ -138,6 +138,10 @@ main {
     p {
       text-align: justify;
     }
+
+    a{
+      display: inline;
+    }
   }
 
 
@@ -163,7 +167,6 @@ main {
       
       div.circle{
         flex: 0 1 250px;
-        // max-width: 250px;
         // border: 3px solid blue;
         padding: 1rem;
 
@@ -198,6 +201,43 @@ main {
       }
     }
   }
+
+  div.image-display{
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    align-items: center;
+    // border: 3px solid blue;
+
+    // for >> <<
+    // position: relative;
+
+    section.project_image{
+      // border: 3px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 500px;
+
+      img{
+        padding: 2rem 1rem;
+        width: 80%;
+        display: block;
+        // transition: opacity 1s ease-in-out;
+      }
+
+      button{
+        font-size: 30px;
+        // position: absolute;
+        // top: 50%;
+        &:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+      }
+    }
+  }
+
 }
 
 footer{

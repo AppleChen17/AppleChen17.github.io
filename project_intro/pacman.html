@@ -29,64 +29,99 @@
     <link rel="stylesheet" href="../styles/style.css" />
     <title>Appleple</title>
   </head>
-  <body>
-    <nav>
-      <ul>
-        <li>#include</li>
-        <li><a href="../index.html"> &lt; Appleple &gt;</a></li>
-        <li>
-          <a href="../about.html"> &lt; About_me &gt;</a>
-        </li>
-        <li>
-          <a class="active" href="../project.html"> &lt; Projects &gt;</a>
-        </li>
-        <li>
-          <a href="../life.html"> &lt; Life &gt;</a>
-        </li>
-        <li>
-          <a href="../other.html"> &lt; Other &gt;</a>
-        </li>
-      </ul>
-    </nav>
-  </body>
-  <main>
-    <a href="../project.html" class="back_button">Back</a>
+  <nav>
+    <ul>
+      <li>#include</li>
+      <li><a href="../index.html"> &lt; Appleple &gt;</a></li>
+      <li>
+        <a href="../about.html"> &lt; About_me &gt;</a>
+      </li>
+      <li>
+        <a class="active" href="../project.html"> &lt; Projects &gt;</a>
+      </li>
+      <li>
+        <a href="../life.html"> &lt; Life &gt;</a>
+      </li>
+      <li>
+        <a href="../other.html"> &lt; Other &gt;</a>
+      </li>
+    </ul>
+  </nav>
+  <body>  
+    <main>
+      <a href="../project.html" class="back_button">Back</a>
 
-    <section class="project_title">
-      <h1>Pacman Game</h1>
-    </section>
+      <section class="project_title">
+        <h1>Pacman</h1>
+      </section>
 
-    <section class="project_intro">
-      <h2 style="padding-left: 1rem" class="knewave-regular">
-        Language : C, Allegro5
-      </h2>
-      <h3 style="padding-left: 1rem" class="knewave-regular">Self Project</h3>
-      <p>
-        This is a class project created according to the rule of Pacman, adding
-        some other features such as cheat mode and some shortcut. Besides, there
-        are sound effects and backgroud music triggered by different events in
-        game.
-      </p>
-      <p>
-        The below is the demo video of our project with some description of the
-        functionalities.
-      </p>
-    </section>
+      <section class="project_intro">
+        <h2 style="padding-left: 1rem" class="knewave-regular">
+          Language : C
+        </h2>
+        
+        <!--  -->
+        <h3 style="padding-left: 1rem ; width: fit-content;" class="knewave-regular" >
+          <a href="https://github.com/AppleChen17/I2P1_Pacman" target="_blank">Github repo</a>
+        </h3>
+        
+        <h4 style="padding-left: 1rem" class="knewave-regular">Self Project</h4>
+        <p>
+          This is a personal class project based on the rules of Pacman, with additional features such as a cheat mode and shortcuts. The game also includes sound effects and background music that are triggered by different in-game events. Players can adjust the volume in the settings menu.
+        </p>
+        <p>
+          Below are some in-game scenes. For more details, click the link to visit the GitHub repository.
+        </p>
+      </section>
 
-    <section class="project_demo">
-      <video
-        controls
-        poster="../image/monopoly_poster.png"
-        width="600"
-        controlslist="nodownload"
-      >
-        <source src="../demo_video/monopoly.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </section>
+      <div class="image-display">
+        <section class="project_image">
+          <button class="btn prev" onclick="prevImage()">&#171;</button>
+          <img id="displayImage" src="../image/pacman_scene/main_scene.png" alt="pacman scene display">
+          <button class="btn next" onclick="nextImage()">&#187;</button>
+        </section>
+      </div>
+
+    </main>
 
     <footer>
       Copyright © 2025 Created by Apple Chen. All Rights Reserved.
     </footer>
-  </main>
+
+
+    <script>
+        const images = ["../image/pacman_scene/main_scene.png", "../image/pacman_scene/Setting_Scene.png"
+        , "../image/pacman_scene/Game_Scene.png","../image/pacman_scene/powerbean_mode.png"
+        ,"../image/pacman_scene/dying_animation.png"];
+        let index = 0;
+
+        // function changeImage(newIndex) {
+        //     displayImage.style.opacity = 0; // 先把當前圖片淡出
+
+        //     // 創建一個新的圖片元素來進行過渡
+        //     const newImage = new Image();
+        //     newImage.src = images[newIndex];
+            
+        //     // 當新圖片加載完畢後執行
+        //     newImage.onload = () => {
+        //         displayImage.src = newImage.src; // 更新顯示圖片
+        //         setTimeout(() => {
+        //             displayImage.style.opacity = 1; // 新圖片淡入
+        //         }, 100); // 延遲一些時間，確保圖片有時間更新
+        //     };
+        // }
+
+        function nextImage() {
+            index = (index + 1) % images.length; 
+            // changeImage(index);
+            document.getElementById("displayImage").src = images[index];
+        }
+
+        function prevImage() {
+            index = (index - 1 + images.length) % images.length; 
+            // changeImage(index);
+            document.getElementById("displayImage").src = images[index];
+        }
+    </script>
+  </body>
 </html>
