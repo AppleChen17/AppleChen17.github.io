@@ -142,59 +142,60 @@ main {
 
 
   section.project-circles {
-    border: 3px solid black;
+    // border: 3px solid black;
     padding: 1rem 1rem;
     h3 {
+      // display: inline-block; => lost text-align!!
+      width: fit-content;
+      // border: 3px solid black;
       font-size: 2rem;
       text-align: center;
+      margin: 0 auto;
+      border-bottom: 3px $ThemeColor solid;
     }
     
     div.circles-area{
-      border: 3px solid crimson;
+      // border: 3px solid crimson;
       padding: 1rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center; // 置中物件
-      // max-width: 1000px;
       
       div.circle{
         flex: 0 1 250px;
         // max-width: 250px;
-        border: 3px solid blue;
+        // border: 3px solid blue;
         padding: 1rem;
 
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         // align-items: center; // 讓字跟圖片都置中
         
         a{
           display:flex;
           flex-wrap:wrap;
           justify-content: center;
-          align-items: center;
+          align-items: flex-end;
           text-decoration: none;
           color: black;
+          // border: solid 5px rgb(247, 214, 69);
           
           img{
             // IMPORTANT for 控制圖片的大小 不然會因為圖片無法對其
             width: 80%;
-            flex: 0 1 150px;
+            flex: 0 1 200px;
             padding: 0.2rem;
             transition: all 0.1s ease-in;
             // hover effect
             &:hover {
-              border: 3px solid $ThemeColor;
+              border: 3px solid rgb(245, 93, 76);
             }
           }
           h4{
-            flex: 0 1 100px;
+            // border: 3px solid seagreen;
           }
-        }
-
-      
+        }      
       }
-
-
     }
   }
 }
